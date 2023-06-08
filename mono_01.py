@@ -25,13 +25,11 @@ print(archivo.metadata)
 
 print(len(archivo))                 # numero de paginas
 
-pag1 = archivo.load_page(1)         # carga la pagina 0
+pag1 = archivo.load_page(1).count()        # carga la pagina 0
 
 print(type(pag1))
 
 imagen = pag1.get_pixmap()          # captura de pantalla de la pagina 0
-
-print(type(imagen))
 
 imagen.save("pagina1.png")          # guarda la imagen como un png
 
@@ -40,10 +38,8 @@ img = mpimg.imread("pagina1.png")   # lee la imagen
 
 print(os.path.exists("pagina1.png"))
 
-# fig, ax = plt.subplots(figsize=(7, 10))
-# ax.imshow(img)
-# ax.axis("off")
 
+print("hola")
 
 # EXTRAER EL TEXTO
 
